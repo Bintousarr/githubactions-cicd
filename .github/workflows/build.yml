@@ -18,6 +18,8 @@ jobs:
         with:
           username: ${{ secrets.bintousarr }}
           password: ${{ secrets.dckr-pat_ZtNgvlitcNULacAvUsogRpPtmTY}}
+          registry: docker.io
+          logout: true
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
