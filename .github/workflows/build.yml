@@ -18,3 +18,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
+      -
+        name: Publish to Docker
+        run: mvn -B spring-boot:build-image -Dspring-boot.build-image.publish=true -DskipTests
